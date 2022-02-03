@@ -12,5 +12,6 @@ public class BankAccountTester {
         acct.deposit(1000);
         System.out.println(acct);
         System.out.println(BankAccount.getNumberOfAccounts());
+
     }
 }
