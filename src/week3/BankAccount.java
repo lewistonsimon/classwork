@@ -35,6 +35,16 @@ public class BankAccount {
             System.out.println("Insufficient funds.");
         }
 
+//        public boolean equals(Object obj) {
+//            if (obj instanceof BankAccount) {
+//                BankAccount otherAcct = (BankAccount) obj;
+//                return owner.equals(otherAcct.owner) &&
+//                        accountNum == otherAcct.accountNum &&
+//                        balance == otherAcct.balance;
+//            } else return false;
+//        }
+
+
 
     }
 
