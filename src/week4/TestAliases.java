@@ -1,6 +1,6 @@
 package week4;
 
-import week3.BankAccount;
+import week4.BankAccount;
 
 import javax.annotation.processing.SupportedAnnotationTypes;
 
@@ -11,7 +11,7 @@ public class TestAliases {
         BankAccount acct1 = new BankAccount("Tom", 123);
         BankAccount acct2 = new BankAccount("Tom", 123);
         BankAccount acct3 = acct1;
-
+        BankAccount acct4 = acct2;
         System.out.println(acct1 == acct2);
         System.out.println(acct1 == acct3);
         System.out.println(acct1.equals(acct2));
