@@ -8,5 +8,15 @@ public class BookTester {
         System.out.println(book1);
         book1.priceChange(10.10);
         System.out.println(book1.returnPrice());
+
+        Textbook txtbook1 = new Textbook("Big Java", 150, "Cayman",
+                "Computer Science");
+        System.out.println(txtbook1);
+        txtbook1.addResource("www.book.com");
+        txtbook1.addResource("www.book.com");
+        System.out.println(txtbook1);
+
+        Book test = txtbook1;
+        test.doSomething();
     }
 }

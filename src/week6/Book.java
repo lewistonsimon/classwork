@@ -15,7 +15,12 @@ public class Book {
     }
 
     public double returnPrice() {
+
         return price;
+    }
+
+    public void doSomething() {
+        System.out.println("In book");
     }
 
     public void priceChange(double newPrice) {
