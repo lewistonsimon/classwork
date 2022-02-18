@@ -4,29 +4,101 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class HomeworkFive {
-    public static void main(String[] args) {
-        ArrayList<Double> list1 = new ArrayList<>();
-        list1.add(14.3);
-        list1.add(42.67);
-        list1.add(16.12);
-        list1.add(14.2);
 
-        ArrayList<Double> list2 = new ArrayList<>();
-        list2.add(34.0);
-        list2.add(17.8);
-
-        // loop
-//        for (Double item : list1) {
-//            list2.add(item);
-//        }
-
-//        for (int index = 0, index < list1.size(), index++) {
-//            list2.add(list1.get(index));
-//        }
-
-        System.out.println(list2);
+    public static int[] problem11(int[] example) {
+        return null;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    public static int addAllNumbers(int[] test) {
+//        int total = 0;
+//        for (int count : test) {
+//            if (count % 2 == 0) {
+//                total += count;
+//            }
+//        }
+//        return total;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] test = {1,2,3,4,5};
+//        System.out.println(addAllNumbers(test));
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//import java.util.ArrayList;
+//import java.util.Arrays;
+//
+//public class HomeworkFive {
+//    public static void main(String[] args) {
+//        ArrayList<Double> list1 = new ArrayList<>();
+//        list1.add(14.3);
+//        list1.add(42.67);
+//        list1.add(16.12);
+//        list1.add(14.2);
+//
+//        ArrayList<Double> list2 = new ArrayList<>();
+//        list2.add(34.0);
+//        list2.add(17.8);
+//
+//        // loop
+////        for (Double item : list1) {
+////            list2.add(item);
+////        }
+//
+////        for (int index = 0, index < list1.size(), index++) {
+////            list2.add(list1.get(index));
+////        }
+//
+//        System.out.println(list2);
+//    }
+//}
 
 
 

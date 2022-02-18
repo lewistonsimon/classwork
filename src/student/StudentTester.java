@@ -13,11 +13,40 @@ public class StudentTester {
 //        Student studentFour = new Student("Zoey");
 //        System.out.println(studentFour);
 
-        Student bob1 = new Student("Bob Smith", 97100);
-        Student bob2 = new Student("Bob Jones", 4321);
-        bob1.precedesById(bob2);
-        bob2.precedesById(bob1);
+//        Student bob1 = new Student("Bob Smith", 97100);
+//        Student bob2 = new Student("Bob Jones", 4321);
+//        bob1.precedesById(bob2);
+//        bob2.precedesById(bob1);
 
+        Student studentSimon = new Student("Simon", 1122);
+        studentSimon.addCourse(new Course("CMSC", "155", 4));
+        studentSimon.addCourse(new Course("CMSC", "155", 4));
+        studentSimon.addCourse(new Course("HIST", "122", 4));
+        studentSimon.addCourse(new Course("Foundations", "111", 4));
+        studentSimon.addCourse(new Course("MIS", "145", 4));
+        studentSimon.addCourse(new Course("REL", "150", 4));
+        System.out.println(studentSimon);
+
+        studentSimon.removeCourse(new Course("Foundations", "111", 4));
+        studentSimon.removeCourse(new Course("MATH", "120", 4));
+        System.out.println(studentSimon);
+
+        studentSimon.addCourse(new Course("Foundation", "111", 4));
+        System.out.println(studentSimon);
+
+        System.out.println();
+
+        Student studentJacob = new Student("Jacob", 3344);
+        System.out.println(studentJacob);
+        studentJacob.addCourse(new Course("MATH", "210", 4));
+        studentJacob.addCourse(new Course("ENG", "170", 4));
+        System.out.println(studentJacob);
+        studentJacob.removeCourse(new Course("ENG", "170", 4));
+        System.out.println(studentJacob);
+        studentJacob.addCourse(new Course("ENG", "170", 4));
+        studentJacob.addCourse(new Course("ENG", "170", 4));
+        System.out.println(studentJacob);
     }
 
 }
+

@@ -13,18 +13,34 @@ public class Course {
 
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        boolean result;
+        if (obj instanceof Course)
+        {
+            Course courseOne = (Course) obj;
+            if (courseOne.department.equals(department))
+            {
+                result = true;
+            }
+            else
+            {
+                result = false;
+            }
+            return result;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public String toString() {
 
-        return department + " " + courseNumber + " is a course that has " +
-                creditHours + " credit hours.";
+        return department + " " + courseNumber + " with " +
+                creditHours + " credit hours";
     }
 
-    public static void main(String[] args) {
-        Course courseOne = new Course("HIST", "122", 4);
-        System.out.println(courseOne);
-        Course courseTwo = new Course("CMSC", "155", 4);
-        System.out.println(courseTwo);
-    }
 }
 
 
