@@ -7,11 +7,13 @@ public class Circle implements Shape{
 
     //constructor
     public Circle(double rad) {
+
         radius = rad;
     }
 
     //class specific methods
     public double computeArea() {
+
         return Math.PI * Math.pow(radius,2);
     }
 
