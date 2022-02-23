@@ -3,27 +3,22 @@ package week7;
 public class RegulariPad implements ProductInterface{
 
     private int memorySize;
+    private boolean cellular;
 
-    public RegulariPad(int memory) {
+    public RegulariPad(int memory, boolean cellular)
+    {
         this.memorySize = memory;
+        this.cellular = cellular;
     }
 
     public double computePrice() {
-        double price = 0;
+        if (cellular) return ((10 * memorySize) + 140);
+        else return (10 * memorySize);
 
-        if (memorySize <= MEMORYSIZE_LEAST)
-        {
-            price = LOW_COST;
-        }
-        else
-        {
-
-        }
-
-        return price;
     }
 
     public String toString() {
-        return "The iPad has " + memorySize;
+
+        return "The iPad has " + memorySize + "memory and cellular is " + cellular;
     }
 }

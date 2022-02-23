@@ -15,6 +15,8 @@ public class SortingPrimitives {
         Collections.sort(lst);
         System.out.println(lst);
 
+        // primitives are int, double, chars, and bites
+
 
 
 
