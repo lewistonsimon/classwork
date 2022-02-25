@@ -28,7 +28,15 @@ public class Textbook extends Book{
     }
 
     public String toString() {
-        return super.toString() + " subject " + subject +
-                " resources " + resources;
+        String result;
+        if (resources.size() >= 1) {
+            result = super.toString() + " It is a textbook for the subject of " + subject +
+                    " and contains the resources " + resources;
+        }
+        else {
+            result = super.toString() + " It is a textbook for the subject of " + subject +".";
+        }
+        return result;
     }
 }
+

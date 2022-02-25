@@ -16,6 +16,8 @@ public class ProductTester {
 
 
         System.out.println(iPad + "\n");
+        System.out.println(iPad2 + "\n");
+        System.out.println(iPad3 + "\n");
 
 
     }

@@ -33,10 +33,10 @@ public class StudentTester {
 
         studentSimon.addCourse(new Course("Foundation", "111", 4));
         System.out.println(studentSimon);
-
+//
         System.out.println();
-
-        Student studentJacob = new Student("Jacob", 3344);
+//
+        Workstudy_Student studentJacob = new Workstudy_Student("Jacob", 3344, 0);
         System.out.println(studentJacob);
         studentJacob.addCourse(new Course("MATH", "210", 4));
         studentJacob.addCourse(new Course("ENG", "170", 4));
@@ -45,8 +45,23 @@ public class StudentTester {
         System.out.println(studentJacob);
         studentJacob.addCourse(new Course("ENG", "170", 4));
         studentJacob.addCourse(new Course("ENG", "170", 4));
+        studentJacob.timeWorked(4);
         System.out.println(studentJacob);
+
+        System.out.println();
+
+        Workstudy_Student studentEmmett = new Workstudy_Student("Emmett",
+                7777, 0);
+        studentEmmett.addCourse(new Course("HIST", "122", 4));
+        studentEmmett.addCourse(new Course("MIS", "145", 4));
+        studentEmmett.addCourse(new Course("BIO", "232", 4));
+        System.out.println(studentEmmett);
+        studentEmmett.timeWorked(5);
+        studentEmmett.removeCourse(new Course("MIS", "145", 4));
+        System.out.println(studentEmmett);
+
     }
 
 }
+
 

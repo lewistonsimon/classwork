@@ -26,8 +26,46 @@ public class BankAccount implements Comparable<BankAccount>{
 
 
     //other methods
+//    public int compareTo(BankAccount other) {
+//        return this.owner.compareTo(other.owner);
+//    }
+
+//    public int compareTo(BankAccount other) {
+//
+//        if (this.accountNum < other.accountNum) {
+//            return -1;
+//        }
+//        else if (this.accountNum > other.accountNum) {
+//            return 1;
+//        }
+//        else {
+//            return 0;
+//        }
+//
+//        // this version also works for int.
+////        return this.accountNum - other.accountNum;
+//    }
+
+
     public int compareTo(BankAccount other) {
-        return this.owner.compareTo(other.owner);
+
+        if (this.owner.compareTo(other.owner) == 0) {
+            if (this.balance < other.balance) {
+                return -1;
+            }
+            else if (this.balance > other.balance) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+
+
+//            return (int) (this.balance - other.balance);
+        }
+        else {
+            return this.owner.compareTo(other.owner);
+        }
     }
 
     public void deposit(double amount) {
