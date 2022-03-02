@@ -1,6 +1,8 @@
-package week7;
+package week7.ipad;
 
-public class RegulariPad implements ProductInterface{
+import week7.ipad.ProductInterface;
+
+public class RegulariPad implements ProductInterface {
 
     private int memorySize;
     private boolean cellular;

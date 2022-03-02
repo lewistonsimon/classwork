@@ -1,20 +1,21 @@
-package week7;
+package week7.ipad;
 
-public class TwelveiniPadPro implements ProductInterface {
+import week7.ipad.ProductInterface;
+
+public class EleveniniPadPro implements ProductInterface {
 
     private int memorySize;
     private boolean cellular;
 
-
-    public TwelveiniPadPro(int memory, boolean cellular) {
+    public EleveniniPadPro(int memory, boolean cellular) {
 
         this.memorySize = memory;
         this.cellular = cellular;
     }
 
     public double computePrice() {
-        if (cellular) return ((12 * memorySize) + 160);
-        else return (12 * memorySize);
+        if (cellular) return ((11 * memorySize) + 150);
+        else return (11 * memorySize);
     }
 
     public String toString() {

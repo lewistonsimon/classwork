@@ -1,4 +1,4 @@
-package week7;
+package week7.ipad;
 
 public class ProductTester {
     public static void main(String[] args)  {
