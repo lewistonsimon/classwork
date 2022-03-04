@@ -4,8 +4,8 @@ public class Workstudy_Student extends Student{
 
     private double hoursWorked;
 
-    public Workstudy_Student(String name, int number, double hours) {
-        super(name, number);
+    public Workstudy_Student(String name, int number, Major major, double hours) {
+        super(name, number, major);
         this.hoursWorked = hours;
     }
 

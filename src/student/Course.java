@@ -19,7 +19,9 @@ public class Course {
         if (obj instanceof Course)
         {
             Course courseOne = (Course) obj;
-            if (courseOne.department.equals(department))
+            if (courseOne.department.equals(department) &&
+                    courseOne.courseNumber.equals(courseNumber) &&
+                    courseOne.creditHours == creditHours)
             {
                 result = true;
             }
@@ -35,6 +37,16 @@ public class Course {
         }
     }
 
+    public String getDepartment() {
+        return this.department;
+    }
+
+    public int getCourseNumber() {
+        int courseNum = Integer.parseInt(courseNumber);
+
+        return courseNum;
+    }
+
     public String toString() {
 
         return department + " " + courseNumber + " with " +
@@ -42,6 +54,7 @@ public class Course {
     }
 
 }
+
 
 
 

@@ -9,17 +9,21 @@ public class Student {
     private String name;
     private int identificationNumber;
     private ArrayList<Course> courses;
+    private Major studentsMajor;
 
-    public Student(String name, int number) {
+    public Student(String name, int number, Major major) {
         this.identificationNumber = number;
         this.name = name;
         this.courses = new ArrayList<>();
+        this.studentsMajor = major;
 
     }
 
-    public Student(String name) {
+    public Student(String name, Major major) {
         this.name = name;
         this.identificationNumber = nextID++;
+        this.courses = new ArrayList<>();
+        this.studentsMajor = major;
     }
 
     public void rename(String newName) {
@@ -52,23 +56,27 @@ public class Student {
         }
     }
 
+
+
     public String toString() {
 
         String result = "";
         if (courses.size() == 4) {
-            result = name + " has the ID number "
-                    + identificationNumber + " and is taking " + courses +
+            result = name + " with the ID number "
+                    + identificationNumber + " has declared a " + studentsMajor + " major "
+                    + ". They are taking " + courses +
                     ". They are a full time student.";
         }
         else if (courses.size() < 4 && courses.size() > 0) {
-            result = name + " has the ID number "
-                    + identificationNumber + " and is taking " + courses +
+            result = name + " with the ID number "
+                    + identificationNumber + " has declared a " + studentsMajor + " major " +
+                     ". They are taking " + courses +
                     ". They can take more classes.";
         }
         else if (courses.size() == 0) {
-            result = name + " has the ID number "
-                    + identificationNumber +
-                    ". They are not enrolled in any classes.";
+            result = name + " with the ID number "
+                    + identificationNumber + " has declared a " + studentsMajor + " major"
+                    + ". They are not enrolled in any classes.";
         }
         return result;
     }

@@ -18,47 +18,50 @@ public class StudentTester {
 //        bob1.precedesById(bob2);
 //        bob2.precedesById(bob1);
 
-        Student studentSimon = new Student("Simon", 1122);
-        studentSimon.addCourse(new Course("CMSC", "155", 4));
-        studentSimon.addCourse(new Course("CMSC", "155", 4));
-        studentSimon.addCourse(new Course("HIST", "122", 4));
-        studentSimon.addCourse(new Course("Foundations", "111", 4));
-        studentSimon.addCourse(new Course("MIS", "145", 4));
-        studentSimon.addCourse(new Course("REL", "150", 4));
-        System.out.println(studentSimon);
-
-        studentSimon.removeCourse(new Course("Foundations", "111", 4));
-        studentSimon.removeCourse(new Course("MATH", "120", 4));
-        System.out.println(studentSimon);
-
-        studentSimon.addCourse(new Course("Foundation", "111", 4));
-        System.out.println(studentSimon);
+//        Student studentSimon = new Student("Simon", 1122);
+//        studentSimon.addCourse(new Course("CMSC", "155", 4));
+//        studentSimon.addCourse(new Course("CMSC", "155", 4));
+//        studentSimon.addCourse(new Course("HIST", "122", 4));
+//        studentSimon.addCourse(new Course("Foundations", "111", 4));
+//        studentSimon.addCourse(new Course("MIS", "145", 4));
+//        studentSimon.addCourse(new Course("REL", "150", 4));
+//        System.out.println(studentSimon);
 //
-        System.out.println();
+//        studentSimon.removeCourse(new Course("Foundations", "111", 4));
+//        studentSimon.removeCourse(new Course("MATH", "120", 4));
+//        System.out.println(studentSimon);
 //
-        Workstudy_Student studentJacob = new Workstudy_Student("Jacob", 3344, 0);
-        System.out.println(studentJacob);
-        studentJacob.addCourse(new Course("MATH", "210", 4));
-        studentJacob.addCourse(new Course("ENG", "170", 4));
-        System.out.println(studentJacob);
-        studentJacob.removeCourse(new Course("ENG", "170", 4));
-        System.out.println(studentJacob);
-        studentJacob.addCourse(new Course("ENG", "170", 4));
-        studentJacob.addCourse(new Course("ENG", "170", 4));
-        studentJacob.timeWorked(4);
-        System.out.println(studentJacob);
+//        studentSimon.addCourse(new Course("Foundation", "111", 4));
+//        System.out.println(studentSimon);
+////
+//        System.out.println();
+////
+//        Workstudy_Student studentJacob = new Workstudy_Student("Jacob", 3344, 0);
+//        System.out.println(studentJacob);
+//        studentJacob.addCourse(new Course("MATH", "210", 4));
+//        studentJacob.addCourse(new Course("ENG", "170", 4));
+//        System.out.println(studentJacob);
+//        studentJacob.removeCourse(new Course("ENG", "170", 4));
+//        System.out.println(studentJacob);
+//        studentJacob.addCourse(new Course("ENG", "170", 4));
+//        studentJacob.addCourse(new Course("ENG", "170", 4));
+//        studentJacob.timeWorked(4);
+//        System.out.println(studentJacob);
+//
+//        System.out.println();
+//
+//        Workstudy_Student studentEmmett = new Workstudy_Student("Emmett",
+//                7777, 0);
+//        studentEmmett.addCourse(new Course("HIST", "122", 4));
+//        studentEmmett.addCourse(new Course("MIS", "145", 4));
+//        studentEmmett.addCourse(new Course("BIO", "232", 4));
+//        System.out.println(studentEmmett);
+//        studentEmmett.timeWorked(5);
+//        studentEmmett.removeCourse(new Course("MIS", "145", 4));
+//        System.out.println(studentEmmett);
 
-        System.out.println();
-
-        Workstudy_Student studentEmmett = new Workstudy_Student("Emmett",
-                7777, 0);
-        studentEmmett.addCourse(new Course("HIST", "122", 4));
-        studentEmmett.addCourse(new Course("MIS", "145", 4));
-        studentEmmett.addCourse(new Course("BIO", "232", 4));
-        System.out.println(studentEmmett);
-        studentEmmett.timeWorked(5);
-        studentEmmett.removeCourse(new Course("MIS", "145", 4));
-        System.out.println(studentEmmett);
+        Student studentSam = new Student("Sam", 1229, new Math());
+        System.out.println(studentSam);
 
     }
 
