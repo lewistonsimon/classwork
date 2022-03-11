@@ -63,7 +63,27 @@ public class OurLinkedList {
 
     //insert
     public void insert(int position, int value) {
-
+        if (position >= size()) {
+            addNode(value);
+        }
+            else {
+            int index = 0;
+            Node currentNode = firstNode;
+            Node newNode = new Node(value);
+            if (position == 0) {
+                newNode.setLink(firstNode);
+                firstNode = newNode;
+            }
+            else {
+                while (index < position - 1) {
+                    index++;
+                    currentNode = currentNode.getLink();
+                }
+                Node tempNode = currentNode.getLink();
+                currentNode.setLink(newNode);
+                newNode.setLink(tempNode);
+            }
+        }
     }
 
     //Remove

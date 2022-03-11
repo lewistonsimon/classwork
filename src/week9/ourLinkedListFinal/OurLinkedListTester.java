@@ -29,11 +29,14 @@ public class OurLinkedListTester {
         System.out.println("Value of index 2 should be 7: " + list.getValue(2));
         System.out.println("Value of index 0 should be 4: " + list.getValue(0));
         System.out.println("Value of index 14 should be -1: " + list.getValue(14));
+
+
+
 //
-//        list.insert(3, 10);
-//        System.out.println("list should be 4 2 7 10 71 6: " + list); // 4 2 7 10 71 6
-//        list.insert(1, 100);
-//        System.out.println("list should be 4 100 2 7 10 71 6: " + list); // 4 100 2 7 10 71 6
+        list.insert(3, 10);
+        System.out.println("list should be 4 2 7 10 71 6: " + list); // 4 2 7 10 71 6
+        list.insert(100, 100);
+        System.out.println("list should be 4 100 2 7 10 71 6: " + list); // 4 100 2 7 10 71 6
 //        list.insert(0, 5);
 //        System.out.println("list should be 5 4 100 2 7 10 71 6: " + list); // 5 4 100 2 7 10 71 6
 //        list.insert(-2, -2);

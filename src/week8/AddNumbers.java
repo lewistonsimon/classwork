@@ -20,7 +20,7 @@ public class AddNumbers {
 
     public static void main(String[] args) {
         printNumbers(4);
-        //System.out.println(addNumbers(4));
+        System.out.println(addNumbers(4));
 
     }
 
