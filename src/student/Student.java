@@ -1,6 +1,7 @@
 package student;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Student {
 
@@ -10,12 +11,14 @@ public class Student {
     private int identificationNumber;
     private ArrayList<Course> courses;
     private Major studentsMajor;
+    private boolean hasBeenSorted;
 
     public Student(String name, int number, Major major) {
         this.identificationNumber = number;
         this.name = name;
         this.courses = new ArrayList<>();
         this.studentsMajor = major;
+        this.hasBeenSorted = true;
 
     }
 
@@ -44,9 +47,8 @@ public class Student {
 
     public void addCourse(Course newCourse) {
         if (!courses.contains(newCourse)) {
-            if (courses.size() < 4) {
-                courses.add(newCourse);
-            }
+            courses.add(newCourse);
+            this.hasBeenSorted = false;
         }
     }
 
@@ -56,30 +58,70 @@ public class Student {
         }
     }
 
-
+    public boolean declareMajor() {
+        return studentsMajor.qualifyForMajor(courses);
+    }
 
     public String toString() {
 
         String result = "";
-        if (courses.size() == 4) {
-            result = name + " with the ID number "
-                    + identificationNumber + " has declared a " + studentsMajor + " major "
-                    + ". They are taking " + courses +
-                    ". They are a full time student.";
+        if (hasBeenSorted == false)
+        {
+            Collections.sort(courses);
+            hasBeenSorted = true;
         }
-        else if (courses.size() < 4 && courses.size() > 0) {
-            result = name + " with the ID number "
-                    + identificationNumber + " has declared a " + studentsMajor + " major " +
-                     ". They are taking " + courses +
-                    ". They can take more classes.";
-        }
-        else if (courses.size() == 0) {
-            result = name + " with the ID number "
-                    + identificationNumber + " has declared a " + studentsMajor + " major"
-                    + ". They are not enrolled in any classes.";
-        }
-        return result;
+            if (courses.size() >= 4) {
+                if (declareMajor())
+                {
+                    result = name + " with the ID number "
+                            + identificationNumber + " has declared a " + studentsMajor + " major. "
+                            + "They qualify for the " + studentsMajor + " major. They are taking " + courses +
+                            ". They are a full time student.";
+                }
+                else
+                {
+                    result = name + " with the ID number "
+                            + identificationNumber + " has declared a " + studentsMajor + " major. "
+                            + "They are taking " + courses +
+                            ". They do not qualify for the " + studentsMajor + " major yet." +
+                            " They are a full time student.";
+                }
+            }
+            else if (courses.size() < 4 && courses.size() > 0) {
+                if (declareMajor())
+                {
+                    result = name + " with the ID number "
+                            + identificationNumber + " has declared a " + studentsMajor + " major" +
+                            ". They qualify for the major " +
+                            ". They are taking " + courses +
+                            ". They can take more classes.";
+                }
+                else
+                {
+                    result = name + " with the ID number "
+                            + identificationNumber + " has declared a " + studentsMajor + " major " +
+                            ". They are taking " + courses + " They do not qualify for the " + studentsMajor + " major yet" +
+                            ". They can take more classes.";
+                }
+            }
+            else if (courses.size() == 0) {
+                if (declareMajor())
+                {
+                    result = name + " with the ID number "
+                            + identificationNumber + " has declared a " + studentsMajor + " major"
+                            + "They have qualified for the " + studentsMajor + " major. They are currently not enrolled in any classes.";
+                }
+                else {
+                    result = name + " with the ID number "
+                            + identificationNumber + " has declared a " + studentsMajor + " major. "
+                            + "They have nat qualified for the " + studentsMajor + " major. They are currently not enrolled in any classes.";
+                }
+            }
+            return result;
+
+
     }
 
 }
+
 

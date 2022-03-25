@@ -1,6 +1,6 @@
 package student;
 
-public class Course {
+public class Course implements Comparable<Course> {
 
     private String department;
     private String courseNumber;
@@ -45,6 +45,32 @@ public class Course {
         int courseNum = Integer.parseInt(courseNumber);
 
         return courseNum;
+    }
+
+    public int compareTo(Course obj) {
+        if (this.department.compareTo(obj.department) > 0)
+        {
+            return 1;
+        }
+        else if (this.department.compareTo(obj.department) < 0)
+        {
+            return -1;
+        }
+        else
+        {
+            if (this.courseNumber.compareTo(obj.courseNumber) > 0)
+            {
+                return 1;
+            }
+            else if (this.courseNumber.compareTo(obj.courseNumber) < 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 
     public String toString() {

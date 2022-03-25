@@ -35,7 +35,7 @@ public class StudentTester {
 //        System.out.println(studentSimon);
 ////
 //        System.out.println();
-////
+//
 //        Workstudy_Student studentJacob = new Workstudy_Student("Jacob", 3344, 0);
 //        System.out.println(studentJacob);
 //        studentJacob.addCourse(new Course("MATH", "210", 4));
@@ -45,9 +45,9 @@ public class StudentTester {
 //        System.out.println(studentJacob);
 //        studentJacob.addCourse(new Course("ENG", "170", 4));
 //        studentJacob.addCourse(new Course("ENG", "170", 4));
-//        studentJacob.timeWorked(4);
+//        studentJacob.addCourse(4);
 //        System.out.println(studentJacob);
-//
+
 //        System.out.println();
 //
 //        Workstudy_Student studentEmmett = new Workstudy_Student("Emmett",
@@ -56,13 +56,55 @@ public class StudentTester {
 //        studentEmmett.addCourse(new Course("MIS", "145", 4));
 //        studentEmmett.addCourse(new Course("BIO", "232", 4));
 //        System.out.println(studentEmmett);
-//        studentEmmett.timeWorked(5);
+//        studentEmmett.addHours(5);
 //        studentEmmett.removeCourse(new Course("MIS", "145", 4));
 //        System.out.println(studentEmmett);
+//
+//        System.out.println();
+//
+//        Student studentNick = new Student("Nick", 1223);
+//        studentNick.addCourse(new Course("MATH", "122", 4));
+//        studentNick.addCourse(new CG_Course("ENG", "145", 4, "West Des Moines"));
+//        studentNick.addCourse(new CG_Course("PYSC", "210", 4, "West Des Moines"));
+//        System.out.println(studentNick);
+//        studentNick.removeCourse(new CG_Course("PYSC", "210", 4, "West Des Moines"));
+//        System.out.println(studentNick);
 
-        Student studentSam = new Student("Sam", 1229, new Math());
-        System.out.println(studentSam);
+        Student studentSamTheMathMan = new Student("Sam", 1298, new Math());
+        studentSamTheMathMan.addCourse(new Course("MATH", "245", 4));
+        studentSamTheMathMan.addCourse(new Course("MATH", "215", 4));
+        studentSamTheMathMan.addCourse(new Course("MATH", "320", 4));
+        studentSamTheMathMan.addCourse(new Course("CMSC", "155", 4));
+        studentSamTheMathMan.addCourse(new Course("CMSC", "355", 4));
+        studentSamTheMathMan.addCourse(new Course("CMSC", "150", 4));
+        System.out.println(studentSamTheMathMan);
 
+        System.out.println();
+
+        Student studentLaurenTheCMSCGirl = new Student("Lauren", 5649, new CMSC());
+        studentLaurenTheCMSCGirl.addCourse(new Course("CMSC", "150", 4));
+        studentLaurenTheCMSCGirl.addCourse(new Course("CMSC", "155", 4));
+        studentLaurenTheCMSCGirl.addCourse(new Course("CMSC", "250", 4));
+        System.out.println(studentLaurenTheCMSCGirl);
+
+        System.out.println();
+
+        Student studentChuck = new Student("Chuck", 4243, new Math());
+        studentChuck.addCourse(new Course("MATH", "105", 4));
+        studentChuck.addCourse(new Course("MATH", "190", 4));
+        studentChuck.addCourse(new Course("MATH", "213", 4));
+        studentChuck.addCourse(new Course("CMSC", "220", 4));
+        studentChuck.addCourse(new Course("CMSC", "220", 4));
+        studentChuck.addCourse(new Course("CMSC", "340", 4));
+        System.out.println(studentChuck);
+
+        System.out.println();
+
+        Student studentMaddie = new Student("Maddie", 2375, new CMSC());
+        studentMaddie.addCourse(new Course("CMSC", "233", 4));
+        studentMaddie.addCourse(new Course("CMSC", "130", 4));
+        studentMaddie.addCourse(new Course("CMSC", "345", 4));
+        System.out.println(studentMaddie);
     }
 
 }

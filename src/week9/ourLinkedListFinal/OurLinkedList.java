@@ -88,8 +88,36 @@ public class OurLinkedList {
 
     //Remove
     public void remove(int position) {
+        if (position >= size())
+        {
+            position = size() - 1;
+        }
+        if (size() > 0)
+        {
+            if (position <= 0)
+            {
+                this.firstNode = firstNode.getLink();
+            }
+            else {
+                int index = 0;
+                Node currentNode = firstNode;
+                while (index < position - 1) {
+                    index++;
+                    currentNode = currentNode.getLink();
+                }
+                if (currentNode.getLink() != null)
+                {
+                    currentNode.setLink(currentNode.getLink().getLink());
+                }
+                else
+                {
+                    currentNode.setLink(null);
+                }
 
+            }
+        }
     }
+
 
     //toString
     public String toString() {

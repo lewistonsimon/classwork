@@ -1,17 +1,19 @@
 package week9;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class Library {
 
     //instance variables
     private String libraryName;
-    private ArrayList<Book> bookList;
+    private LinkedList<Book> bookList;
 
     //constructor
     public Library(String name) {
         libraryName = name;
-        bookList = new ArrayList<>();
+        bookList = new LinkedList<>();
     }
 
     //other methods
@@ -30,10 +32,14 @@ public class Library {
     //Print method
     public String toString() {
         String out = libraryName + " has the following books: ";
-        for (Book book : bookList) {
-            out = out + book + ", ";
+        ListIterator<Book> iter = bookList.listIterator();
+        while (iter.hasNext()){
+            Book nextBook = iter.next();
+            System.out.println(out + " " + nextBook + " ");
         }
+//        for (Book book : bookList) {
+//            out = out + book + ", ";
+//        }
         return out;
     }
 }
-
