@@ -27,7 +27,7 @@ public class OurLinkedList {
             while (currentNode.getLink() != null) {
                 currentNode = currentNode.getLink();
             }
-           currentNode.setLink(newNode);
+            currentNode.setLink(newNode);
         }
 
 
@@ -66,7 +66,7 @@ public class OurLinkedList {
         if (position >= size()) {
             addNode(value);
         }
-            else {
+        else {
             int index = 0;
             Node currentNode = firstNode;
             Node newNode = new Node(value);
@@ -130,4 +130,3 @@ public class OurLinkedList {
         return out;
     }
 }
-
