@@ -8,43 +8,43 @@ import java.util.*;
 public class TryMaps {
 
     public static void main(String[] args) {
-        Map<String, Integer> test = new HashMap<>();
-        test.put("A",1);
-        test.put("B",2);
-        System.out.println(test);
-
-        test.put("A",2);
-        test.put("C",3);
-        System.out.println(test);
-
+//        Map<String, Integer> test = new HashMap<>();
+//        test.put("A",1);
+//        test.put("B",2);
+//        System.out.println(test);
 //
-        System.out.println("B contains: " + test.get("B"));
+//        test.put("A",2);
+//        test.put("C",3);
+//        System.out.println(test);
 //
-		for (String key : test.keySet())
-			System.out.println(key + " " + test.get(key));
-//
-        Iterator it = test.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry) it.next();
-            System.out.println(pair.getKey() + " = " + pair.getValue());
-        }
 ////
-		test.remove("A");
-		System.out.println(test);
+//        System.out.println("B contains: " + test.get("B"));
 ////
-		test.put("A", 8);
-		System.out.println(test); // order of elements not guaranteed
+//		for (String key : test.keySet())
+//			System.out.println(key + " " + test.get(key));
 ////
-        System.out.println(test.get("B") + test.get("C"));
-////
-     System.out.println(test.get("D")); // result is null
-////
-         System.out.println(test.get(2));
-     // result is null - not an error, even though 5 is the wrong key type!
-////
-//        System.out.println(test.get("B") + test.get("D")); // run-time error
-////
-        if (test.containsKey("D")) System.out.println(test.get("D")); // no output
+//        Iterator it = test.entrySet().iterator();
+//        while (it.hasNext()) {
+//            Map.Entry pair = (Map.Entry) it.next();
+//            System.out.println(pair.getKey() + " = " + pair.getValue());
+//        }
+//////
+//		test.remove("A");
+//		System.out.println(test);
+//////
+//		test.put("A", 8);
+//		System.out.println(test); // order of elements not guaranteed
+//////
+//        System.out.println(test.get("B") + test.get("C"));
+//////
+//     System.out.println(test.get("D")); // result is null
+//////
+//         System.out.println(test.get(2));
+//     // result is null - not an error, even though 5 is the wrong key type!
+//////
+////        System.out.println(test.get("B") + test.get("D")); // run-time error
+//////
+//        if (test.containsKey("D")) System.out.println(test.get("D")); // no output
 ////
 //		String key1 = "D"; // repeat above example but don't duplicate "D".
 //        if (test.containsKey(key1)) System.out.println(test.get(key1)); // no output
@@ -59,7 +59,7 @@ public class TryMaps {
 ////
 // //Three classes that implement the Map interface: HashMap, LinkedHashMap  TreeMap
 //
-//    // HashSet does not guarantee the order of elements.
+    // HashSet does not guarantee the order of elements.
 //    Map<String, Integer> hashmap= new HashMap<>();
 //		hashmap.put("dog", 4);
 //		hashmap.put("cat", 4);
@@ -72,7 +72,7 @@ public class TryMaps {
 //		hashmap.put("fish", 0);
 //		System.out.println(hashmap);  // Order MAY CHANGE.
 ////
-////  //  HashLinkedMap maintains the order elements are added in.
+//  //  HashLinkedMap maintains the order elements are added in.
 //    Map<String, Integer> linkedHashmap = new LinkedHashMap<>();
 //		linkedHashmap.put("dog", 4);
 //		linkedHashmap.put("cat", 4);
@@ -85,18 +85,18 @@ public class TryMaps {
 //		linkedHashmap.put("fish", 0);
 //		System.out.println(linkedHashmap);  // Order has changed: fish is last
 ////
-////     //TreeMap keeps the keys in sorted order (alphabetical for strings). It does so efficiently, using a binary search tree.
-//    Map<String, Integer> treemap = new TreeMap<>();
-//		treemap.put("dog", 4);
-//		treemap.put("cat", 4);
-//		treemap.put("fish", 0);
-//		treemap.put("bird", 2);
-//		treemap.put("spider", 8);
-//		System.out.println(treemap);  // Keys are in alphabetical order.
-//
-//		treemap.remove("fish");
-//		treemap.put("fish", 0);
-//		System.out.println(treemap);  // Order has NOT changed.
+//     //TreeMap keeps the keys in sorted order (alphabetical for strings). It does so efficiently, using a binary search tree.
+    Map<String, Integer> treemap = new TreeMap<>();
+		treemap.put("dog", 4);
+		treemap.put("cat", 4);
+		treemap.put("fish", 0);
+		treemap.put("bird", 2);
+		treemap.put("spider", 8);
+		System.out.println(treemap);  // Keys are in alphabetical order.
+
+		treemap.remove("fish");
+		treemap.put("fish", 0);
+		System.out.println(treemap);  // Order has NOT changed.
     }
 }
 
