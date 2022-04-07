@@ -70,41 +70,51 @@ public class StudentTester {
 //        studentNick.removeCourse(new CG_Course("PYSC", "210", 4, "West Des Moines"));
 //        System.out.println(studentNick);
 
-        Student studentSamTheMathMan = new Student("Sam", 1298, new Math());
-        studentSamTheMathMan.addCourse(new Course("MATH", "245", 4));
-        studentSamTheMathMan.addCourse(new Course("MATH", "215", 4));
-        studentSamTheMathMan.addCourse(new Course("MATH", "320", 4));
-        studentSamTheMathMan.addCourse(new Course("CMSC", "155", 4));
-        studentSamTheMathMan.addCourse(new Course("CMSC", "355", 4));
-        studentSamTheMathMan.addCourse(new Course("CMSC", "150", 4));
-        System.out.println(studentSamTheMathMan);
+//        Student studentSamTheMathMan = new Student("Sam", 1298, new Math());
+//        studentSamTheMathMan.addCourse(new Course("MATH", "245", 4));
+//        studentSamTheMathMan.addCourse(new Course("MATH", "215", 4));
+//        studentSamTheMathMan.addCourse(new Course("MATH", "320", 4));
+//        studentSamTheMathMan.addCourse(new Course("CMSC", "155", 4));
+//        studentSamTheMathMan.addCourse(new Course("CMSC", "355", 4));
+//        studentSamTheMathMan.addCourse(new Course("CMSC", "150", 4));
+//        System.out.println(studentSamTheMathMan);
+//
+//        System.out.println();
+//
+//        Student studentLaurenTheCMSCGirl = new Student("Lauren", 5649, new CMSC());
+//        studentLaurenTheCMSCGirl.addCourse(new Course("CMSC", "150", 4));
+//        studentLaurenTheCMSCGirl.addCourse(new Course("CMSC", "155", 4));
+//        studentLaurenTheCMSCGirl.addCourse(new Course("CMSC", "250", 4));
+//        System.out.println(studentLaurenTheCMSCGirl);
+//
+//        System.out.println();
+//
+//        Student studentChuck = new Student("Chuck", 4243, new Math());
+//        studentChuck.addCourse(new Course("MATH", "105", 4));
+//        studentChuck.addCourse(new Course("MATH", "190", 4));
+//        studentChuck.addCourse(new Course("MATH", "213", 4));
+//        studentChuck.addCourse(new Course("CMSC", "220", 4));
+//        studentChuck.addCourse(new Course("CMSC", "220", 4));
+//        studentChuck.addCourse(new Course("CMSC", "340", 4));
+//        System.out.println(studentChuck);
+//
+//        System.out.println();
+//
+//        Student studentMaddie = new Student("Maddie", 2375, new CMSC());
+//        studentMaddie.addCourse(new Course("CMSC", "233", 4));
+//        studentMaddie.addCourse(new Course("CMSC", "130", 4));
+//        studentMaddie.addCourse(new Course("CMSC", "345", 4));
+//        System.out.println(studentMaddie);
 
-        System.out.println();
+        Student carter = new Student("Carter", 123, new Math());
+        Student carterjr = new Student("Carter", 123, new Math());
+        Student ben = new Student("Ben", 12343, new Math());
 
-        Student studentLaurenTheCMSCGirl = new Student("Lauren", 5649, new CMSC());
-        studentLaurenTheCMSCGirl.addCourse(new Course("CMSC", "150", 4));
-        studentLaurenTheCMSCGirl.addCourse(new Course("CMSC", "155", 4));
-        studentLaurenTheCMSCGirl.addCourse(new Course("CMSC", "250", 4));
-        System.out.println(studentLaurenTheCMSCGirl);
+        System.out.println(carterjr.hashCode());
+        System.out.println(carter.hashCode());
+        System.out.println(ben.hashCode());
 
-        System.out.println();
 
-        Student studentChuck = new Student("Chuck", 4243, new Math());
-        studentChuck.addCourse(new Course("MATH", "105", 4));
-        studentChuck.addCourse(new Course("MATH", "190", 4));
-        studentChuck.addCourse(new Course("MATH", "213", 4));
-        studentChuck.addCourse(new Course("CMSC", "220", 4));
-        studentChuck.addCourse(new Course("CMSC", "220", 4));
-        studentChuck.addCourse(new Course("CMSC", "340", 4));
-        System.out.println(studentChuck);
-
-        System.out.println();
-
-        Student studentMaddie = new Student("Maddie", 2375, new CMSC());
-        studentMaddie.addCourse(new Course("CMSC", "233", 4));
-        studentMaddie.addCourse(new Course("CMSC", "130", 4));
-        studentMaddie.addCourse(new Course("CMSC", "345", 4));
-        System.out.println(studentMaddie);
     }
 
 }

@@ -58,6 +58,24 @@ public class Student {
         }
     }
 
+    public boolean equals (Object obj) {
+        if (obj instanceof Student) {
+            Student other = (Student) obj;
+            return (name.equals(other.name) &&
+                    identificationNumber == other.identificationNumber);
+        } else return false;
+    }
+
+    @Override
+    public int hashCode() {
+        final int HASH_MULTIPLIER = 7;
+        int h = 7;
+        h = h + name.hashCode() * HASH_MULTIPLIER;
+        h += Integer.valueOf(identificationNumber).hashCode() * HASH_MULTIPLIER;
+
+        return h;
+    }
+
     public boolean declareMajor() {
         return studentsMajor.qualifyForMajor(courses);
     }
