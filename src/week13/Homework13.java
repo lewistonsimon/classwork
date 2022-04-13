@@ -1,6 +1,5 @@
 package week13;
 
-import shapes.Triangle;
 import week13.multipleDimensionalArrays.PrintUtils;
 
 public class Homework13 {
@@ -15,29 +14,18 @@ public class Homework13 {
         p[1][0] = 1;
         p[1][1] = 1;
 
-        for (int row = 2; p[row][0] == n; row++) {
+        for (int row = 2; row <= n + 1; row++) {
+            p[row] = new int[row + 1];
             p[row][0] = 1;
-            p[row][1] = p[row - 1][0] + p[1][1];
-            p[row][p.length - 1] = 1;
-            System.out.println(p);
-
-        }
-
-
-
-        for (int row = 0; row < p.length; row++) {
-            for (int col = 0; col < p[row].length; col++) {
-                System.out.print(p[row][col] + " ");
+            p[row][row] = 1;
+            for (int col = 1; col < row; col++) {
+                p[row][col] = p[row - 1][col] + p[row - 1][col - 1];
             }
-
-
         }
-
         return p;
 }
 
     public static void main(String[] args) {
-
         PrintUtils.printIntMatrix(Triangle(5));
     }
 }
