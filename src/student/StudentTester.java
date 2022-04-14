@@ -70,14 +70,14 @@ public class StudentTester {
 //        studentNick.removeCourse(new CG_Course("PYSC", "210", 4, "West Des Moines"));
 //        System.out.println(studentNick);
 
-//        Student studentSamTheMathMan = new Student("Sam", 1298, new Math());
-//        studentSamTheMathMan.addCourse(new Course("MATH", "245", 4));
-//        studentSamTheMathMan.addCourse(new Course("MATH", "215", 4));
-//        studentSamTheMathMan.addCourse(new Course("MATH", "320", 4));
-//        studentSamTheMathMan.addCourse(new Course("CMSC", "155", 4));
-//        studentSamTheMathMan.addCourse(new Course("CMSC", "355", 4));
-//        studentSamTheMathMan.addCourse(new Course("CMSC", "150", 4));
-//        System.out.println(studentSamTheMathMan);
+        Student studentSamTheMathMan = new Student("Sam", 1298, new Math());
+        studentSamTheMathMan.addCourse(new Course("MATH", "245", 4));
+        studentSamTheMathMan.addCourse(new Course("MATH", "205", 4));
+        studentSamTheMathMan.addCourse(new Course("MATH", "320", 4));
+        studentSamTheMathMan.addCourse(new Course("CMSC", "155", 4));
+        studentSamTheMathMan.addCourse(new Course("CMSC", "355", 4));
+        studentSamTheMathMan.addCourse(new Course("CMSC", "150", 4));
+        System.out.println(studentSamTheMathMan);
 //
 //        System.out.println();
 //
