@@ -1,12 +1,12 @@
 package week12;
 
-public class OurLinkedList<T> {
+public class OurGenericLinkedList<T> {
     //instance variable
-    private GenericNode firstNode;
+    private GenericNode<T> firstNode;
 
 
     //Constructor
-    public OurLinkedList() {
+    public OurGenericLinkedList() {
         firstNode = null;
     }
 
@@ -14,13 +14,13 @@ public class OurLinkedList<T> {
     //addNode
     public void addNode(T value) {
         //create new Node and then decide where it goes
-        GenericNode newNode = new GenericNode<>(value);
+        GenericNode<T> newNode = new GenericNode<>(value);
         //If empty create first node
         if (firstNode == null) {
             firstNode = newNode;
         } else {
             //not first node so get to the end of the list
-            GenericNode currentNode = firstNode;
+            GenericNode<T> currentNode = firstNode;
             while(currentNode.getLink() != null) {
                 currentNode = currentNode.getLink();
             }
@@ -31,20 +31,20 @@ public class OurLinkedList<T> {
 
     public T getValue(int position) {
         int currentPos=0;
-        GenericNode currentNode = firstNode;
+        GenericNode<T> currentNode = firstNode;
         while (currentPos < position && currentNode != null) {
             currentNode = currentNode.getLink();
             currentPos++;
         }
         if (currentNode != null)
-            return (T) currentNode.getValue();
+            return currentNode.getValue();
         else
             return null;
     }
 
     public int size() {
         int count = 0;
-        GenericNode currentNode = firstNode;
+        GenericNode<T> currentNode = firstNode;
         while (currentNode != null) {
             count++;
             currentNode = currentNode.getLink();
@@ -53,14 +53,14 @@ public class OurLinkedList<T> {
     }
 
     //insert
-    public void insert(int position, int value) {
-        GenericNode newNode = new GenericNode(value);
+    public void insert(int position, T value) {
+        GenericNode<T> newNode = new GenericNode<>(value);
         //Put at the beginning if position <= 0
         if (position <= 0) {
             newNode.setLink(firstNode);
             firstNode = newNode;
         } else  {
-            GenericNode currentNode = firstNode;
+            GenericNode<T> currentNode = firstNode;
             int currentPos = 0;
             while (currentPos < position - 1 && currentNode.getLink() != null) {
                 currentNode = currentNode.getLink();
@@ -76,7 +76,7 @@ public class OurLinkedList<T> {
     //toString
     public String toString() {
         String out = "";
-        GenericNode currentNode = firstNode;
+        GenericNode<T> currentNode = firstNode;
         while (currentNode != null) {
             out = out + currentNode.getValue() + " ";
             currentNode = currentNode.getLink();
