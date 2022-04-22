@@ -4,7 +4,7 @@ import week13.multipleDimensionalArrays.PrintUtils;
 
 public class Homework13 {
 
-    public static int[][] Triangle(int n) {
+    public static int[][] triangle(int n) {
 
         int [][] p;
         p = new int[n + 1][];
@@ -14,7 +14,7 @@ public class Homework13 {
         p[1][0] = 1;
         p[1][1] = 1;
 
-        for (int row = 2; row <= n + 1; row++) {
+        for (int row = 2; row <= n; row++) {
             p[row] = new int[row + 1];
             p[row][0] = 1;
             p[row][row] = 1;
@@ -23,10 +23,9 @@ public class Homework13 {
             }
         }
         return p;
-}
+    }
 
     public static void main(String[] args) {
-        PrintUtils.printIntMatrix(Triangle(5));
+        PrintUtils.printIntMatrix(triangle(5));
     }
 }
-
